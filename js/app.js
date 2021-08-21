@@ -54,6 +54,19 @@ function totalPrice() {
     const inTotalPrice = document.getElementById("in-total-price");
     inTotalPrice.innerText = netBill;
 }
+function pomocode() {
+    const inputfield = document.getElementById("pomo-code");
+    const inputPomo = inputfield.value;
+    const inTotalPrice = document.getElementById("in-total-price");
+    const inTotalPriceNumber = parseInt(inTotalPrice.innerText);
+    if (inputPomo.toLowerCase() == 'stevekaku') {
+        let discount = inTotalPriceNumber * 20 / 100;
+        discount = inTotalPriceNumber - discount;
+        inTotalPrice.innerText = discount;
+    }
+
+    inputfield.value = '';
+}
 // Extarnal memory event added
 document.getElementById("memory-8GB").addEventListener("click", function () {
     memoryCard(true);
@@ -83,5 +96,11 @@ document.getElementById("delivery-charge").addEventListener("click", function ()
 // Apply button event add
 document.getElementById("apply").addEventListener("click", function () {
     //stevekaku
-    console.log("ki korla aply");
+    /* const inTotalPrice = document.getElementById("in-total-price");
+    const inTotalPriceNumber = parseInt(inTotalPrice.innerText);
+    let discount = inTotalPriceNumber * 20 / 100;
+    discount = inTotalPriceNumber - discount;
+    inTotalPrice.innerText = discount; */
+    pomocode()
+
 })
