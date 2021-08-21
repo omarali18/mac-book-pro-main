@@ -11,6 +11,7 @@ function memoryCard(isadd) {
 };
 // extra function for storage
 function ssdStorage(isStorageAdd) {
+    // debugger;
     const storageCost = document.getElementById("storage-cost");
     if (isStorageAdd == true) {
         storageCost.innerText = 0;
@@ -24,7 +25,7 @@ function ssdStorage(isStorageAdd) {
     totalPrice()
 
 };
-
+// extra function for delivery
 function deliveryTime(isCostAdd) {
     const deliveryCost = document.getElementById("delivery-cost")
     if (isCostAdd == true) {
@@ -40,7 +41,7 @@ function extraDevice(device) {
     const extraDeviceCost = extraDevicePrice.innerText;
     return parseInt(extraDeviceCost)
 }
-
+// total price calculate.
 function totalPrice() {
     // debugger;
     const bestPrice = document.getElementById("best-price");
@@ -54,11 +55,14 @@ function totalPrice() {
     const inTotalPrice = document.getElementById("in-total-price");
     inTotalPrice.innerText = netBill;
 }
+// For discount and apply event add.
 function pomocode() {
     const inputfield = document.getElementById("pomo-code");
     const inputPomo = inputfield.value;
     const inTotalPrice = document.getElementById("in-total-price");
-    const inTotalPriceNumber = parseInt(inTotalPrice.innerText);
+    // stevekaku bar bar input kore apply korle bar bar discount diye dei tai "total-price" add kora
+    const totalPrice = document.getElementById("total-price");
+    const inTotalPriceNumber = parseInt(totalPrice.innerText);
     if (inputPomo.toLowerCase() == 'stevekaku') {
         let discount = inTotalPriceNumber * 20 / 100;
         discount = inTotalPriceNumber - discount;
@@ -88,19 +92,13 @@ function storage1TB() {
 
 // Delivery charge event added
 document.getElementById("delivery-free").addEventListener("click", function () {
-    deliveryTime(true)
+    deliveryTime(true);
 });
 document.getElementById("delivery-charge").addEventListener("click", function () {
-    deliveryTime(false)
+    deliveryTime(false);
 });
 // Apply button event add
 document.getElementById("apply").addEventListener("click", function () {
-    //stevekaku
-    /* const inTotalPrice = document.getElementById("in-total-price");
-    const inTotalPriceNumber = parseInt(inTotalPrice.innerText);
-    let discount = inTotalPriceNumber * 20 / 100;
-    discount = inTotalPriceNumber - discount;
-    inTotalPrice.innerText = discount; */
-    pomocode()
+    pomocode();
 
 })
