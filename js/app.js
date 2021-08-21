@@ -79,4 +79,9 @@ document.getElementById("delivery-free").addEventListener("click", function () {
 });
 document.getElementById("delivery-charge").addEventListener("click", function () {
     deliveryTime(false)
+});
+// Apply button event add
+document.getElementById("apply").addEventListener("click", function () {
+    //stevekaku
+    console.log("ki korla aply");
 })
