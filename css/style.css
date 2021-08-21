@@ -1,11 +1,12 @@
 
-/* img{
-    width:100%;
-} */
+
 .hover-focus:hover{
     background-color: rgb(29, 28, 28);
     color: white;
 }
 .hover-focus:focus{
-    border: 3px solid gray;
+    border: 3px solid rgb(26, 19, 19);
+    border-collapse: collapse;
+
+
 }

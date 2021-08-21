@@ -35,9 +35,9 @@
                     </div>
                     <div>
                         <h3>Storage</h3>
-                        <button class="rounded hover-focus">256GB SSD storage</button>
-                        <button class="rounded hover-focus">512GB SSD storage</button>
-                        <button class="rounded hover-focus">1TB SSD storage</button>
+                        <button onclick="storage256GB()" class="rounded hover-focus">256GB SSD storage</button>
+                        <button id="storage-512GB" class="rounded hover-focus">512GB SSD storage</button>
+                        <button onclick="storage1TB()" class="rounded hover-focus">1TB SSD storage</button>
                     </div>
                     <div>
                         <h3>Memory</h3>
@@ -59,7 +59,7 @@
                                 </tr>
                                 <tr>
                                     <td>Extra Storage cost</td>
-                                    <td>$<span>0</span></td>
+                                    <td>$<span id="512GBstorage-cost">0</span></td>
                                 </tr>
                                 <tr>
                                     <td>Delivery charge</td>
