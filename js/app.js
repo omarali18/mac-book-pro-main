@@ -25,6 +25,20 @@ function ssdStorage(isStorageAdd) {
     const extraStorageCost = storageCost.innerText;
     return extraStorageCost;
 
+};
+
+function deliveryTime(isCostAdd) {
+    const deliveryCost = document.getElementById("delivery-cost")
+    if (isCostAdd == true) {
+        deliveryCost.innerText = 0;
+    }
+    else {
+        deliveryCost.innerText = 20;
+    }
+};
+
+function totalPrice() {
+    const bestPrice = document.getElementById()
 }
 // Extarnal memory event added
 document.getElementById("memory-8GB").addEventListener("click", function () {
@@ -46,3 +60,11 @@ document.getElementById("storage-512GB").addEventListener("click", function () {
 function storage1TB() {
     ssdStorage("1TB")
 };
+
+// Delivery charge event added
+document.getElementById("delivery-free").addEventListener("click", function () {
+    deliveryTime(true)
+});
+document.getElementById("delivery-charge").addEventListener("click", function () {
+    deliveryTime(false)
+})
